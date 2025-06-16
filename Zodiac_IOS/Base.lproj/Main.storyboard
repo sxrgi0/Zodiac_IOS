@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KVN-PK-OrL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-EA-YvN">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoroscopeCell" rowHeight="100" id="fWH-I0-6Sq" customClass="HoroscopeViewCell" customModule="Zodiac_IOS" customModuleProvider="target">
@@ -51,6 +51,7 @@
                                             <outlet property="HoroscopeDatesLabel" destination="mmC-wv-msI" id="Ew4-f7-3Vn"/>
                                             <outlet property="HoroscopeImageView" destination="tG8-QZ-4qe" id="9TK-o7-lsi"/>
                                             <outlet property="HoroscopeNameLabel" destination="eY0-v8-B6s" id="Rwc-0A-xaY"/>
+                                            <segue destination="xh3-Vo-m0D" kind="show" id="6PW-Z9-s4t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,18 +66,105 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U4e-EA-YvN" secondAttribute="trailing" id="t3f-wx-zM1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AIy-9V-YPU"/>
                     <connections>
                         <outlet property="tableView" destination="U4e-EA-YvN" id="Q1Z-NK-hFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="x6c-kK-utU">
+            <objects>
+                <viewController id="xh3-Vo-m0D" customClass="DetailViewController" customModule="Zodiac_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yuh-E6-G96">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sa-M0-OMS">
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-bp-Tnm">
+                                        <rect key="frame" x="76" y="8" width="240" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxh-WI-aBm">
+                                        <rect key="frame" x="0.0" y="219" width="393" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope dates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-V5-bSP">
+                                        <rect key="frame" x="0.0" y="246" width="393" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p7l-bl-X58"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p7l-bl-X58" firstAttribute="trailing" secondItem="4sa-M0-OMS" secondAttribute="trailing" id="DZZ-Kd-M7L"/>
+                            <constraint firstItem="4sa-M0-OMS" firstAttribute="top" secondItem="p7l-bl-X58" secondAttribute="top" id="GCg-GR-H4g"/>
+                            <constraint firstItem="p7l-bl-X58" firstAttribute="bottom" secondItem="4sa-M0-OMS" secondAttribute="bottom" id="Rlb-J5-1gq"/>
+                            <constraint firstItem="4sa-M0-OMS" firstAttribute="leading" secondItem="p7l-bl-X58" secondAttribute="leading" id="YtY-TM-yZk"/>
+                            <constraint firstItem="4sa-M0-OMS" firstAttribute="leading" secondItem="p7l-bl-X58" secondAttribute="leading" id="grj-wA-Hpx"/>
+                            <constraint firstItem="4sa-M0-OMS" firstAttribute="top" secondItem="p7l-bl-X58" secondAttribute="top" id="mgT-RZ-1BO"/>
+                            <constraint firstItem="p7l-bl-X58" firstAttribute="bottom" secondItem="4sa-M0-OMS" secondAttribute="bottom" id="s6j-S3-CUQ"/>
+                            <constraint firstItem="p7l-bl-X58" firstAttribute="trailing" secondItem="4sa-M0-OMS" secondAttribute="trailing" id="uGN-S5-2aa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AaY-Sp-qO3">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="6NW-Nd-1Nv"/>
+                            <barButtonItem title="Item" image="heart" catalog="system" id="JrQ-XJ-aBt">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="HoroscopeDatesLabel" destination="ndN-V5-bSP" id="SYe-CN-i46"/>
+                        <outlet property="HoroscopeImageView" destination="fmW-bp-Tnm" id="aeX-rq-OJ7"/>
+                        <outlet property="HoroscopeNameLabel" destination="rxh-WI-aBm" id="6ml-ko-NEO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feM-ZV-05U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947.3282442748091" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K7I-Cd-KC0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KVN-PK-OrL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V2k-t3-4WX">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sgc-Ea-V7v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIP-DJ-Out" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
