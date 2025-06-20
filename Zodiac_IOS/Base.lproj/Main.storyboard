@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KVN-PK-OrL">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="Zodiac_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-EA-YvN">
-                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <rect key="frame" x="0.0" y="168" width="402" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoroscopeCell" rowHeight="100" id="fWH-I0-6Sq" customClass="HoroscopeViewCell" customModule="Zodiac_IOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <rect key="frame" x="0.0" y="50" width="402" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWH-I0-6Sq" id="Wc9-9t-PRj">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tG8-QZ-4qe">
@@ -87,31 +87,55 @@
             <objects>
                 <viewController id="xh3-Vo-m0D" customClass="DetailViewController" customModule="Zodiac_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuh-E6-G96">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sa-M0-OMS">
-                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <rect key="frame" x="0.0" y="168" width="402" height="638"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-bp-Tnm">
-                                        <rect key="frame" x="76" y="8" width="240" height="240"/>
+                                        <rect key="frame" x="80" y="8" width="240" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxh-WI-aBm">
-                                        <rect key="frame" x="0.0" y="219" width="393" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="0.0" y="256" width="402" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope dates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-V5-bSP">
-                                        <rect key="frame" x="0.0" y="246" width="393" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="0.0" y="284" width="402" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-dI-k4H">
+                                        <rect key="frame" x="8" y="313" width="386" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Weekly"/>
+                                            <segment title="Monthly"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="didChangePeriod:" destination="xh3-Vo-m0D" eventType="valueChanged" id="IFQ-AE-CFZ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="y6c-TB-oLR">
+                                        <rect key="frame" x="8" y="352" width="386" height="286"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tN3-11-gGp">
+                                        <rect key="frame" x="191" y="485" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -119,10 +143,6 @@
                         <viewLayoutGuide key="safeArea" id="p7l-bl-X58"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="p7l-bl-X58" firstAttribute="trailing" secondItem="4sa-M0-OMS" secondAttribute="trailing" id="DZZ-Kd-M7L"/>
-                            <constraint firstItem="4sa-M0-OMS" firstAttribute="top" secondItem="p7l-bl-X58" secondAttribute="top" id="GCg-GR-H4g"/>
-                            <constraint firstItem="p7l-bl-X58" firstAttribute="bottom" secondItem="4sa-M0-OMS" secondAttribute="bottom" id="Rlb-J5-1gq"/>
-                            <constraint firstItem="4sa-M0-OMS" firstAttribute="leading" secondItem="p7l-bl-X58" secondAttribute="leading" id="YtY-TM-yZk"/>
                             <constraint firstItem="4sa-M0-OMS" firstAttribute="leading" secondItem="p7l-bl-X58" secondAttribute="leading" id="grj-wA-Hpx"/>
                             <constraint firstItem="4sa-M0-OMS" firstAttribute="top" secondItem="p7l-bl-X58" secondAttribute="top" id="mgT-RZ-1BO"/>
                             <constraint firstItem="p7l-bl-X58" firstAttribute="bottom" secondItem="4sa-M0-OMS" secondAttribute="bottom" id="s6j-S3-CUQ"/>
@@ -131,7 +151,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="AaY-Sp-qO3">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="6NW-Nd-1Nv"/>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="6NW-Nd-1Nv">
+                                <connections>
+                                    <action selector="shared:" destination="xh3-Vo-m0D" id="gsg-Mf-5ZB"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="heart" catalog="system" id="JrQ-XJ-aBt">
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <connections>
@@ -145,12 +169,14 @@
                         <outlet property="HoroscopeImageView" destination="fmW-bp-Tnm" id="aeX-rq-OJ7"/>
                         <outlet property="HoroscopeNameLabel" destination="rxh-WI-aBm" id="6ml-ko-NEO"/>
                         <outlet property="favoriteMenu" destination="JrQ-XJ-aBt" id="8Rg-Sw-iSt"/>
+                        <outlet property="horoscopeLuckTextView" destination="y6c-TB-oLR" id="iuN-HW-vhH"/>
+                        <outlet property="loadingView" destination="tN3-11-gGp" id="JYR-xy-9AA"/>
                         <outlet property="shareMenu" destination="6NW-Nd-1Nv" id="sG5-cy-g2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feM-ZV-05U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947.3282442748091" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1946.2686567164178" y="3.432494279176201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K7I-Cd-KC0">
@@ -158,7 +184,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KVN-PK-OrL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V2k-t3-4WX">
-                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="124" width="402" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
