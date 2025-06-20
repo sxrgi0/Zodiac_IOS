@@ -38,19 +38,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-wv-msI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-wv-msI">
                                                     <rect key="frame" x="106" y="48" width="279" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-yq-ddR">
+                                                    <rect key="frame" x="78" y="69" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemPinkColor"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="HoroscopeDatesLabel" destination="mmC-wv-msI" id="Ew4-f7-3Vn"/>
                                             <outlet property="HoroscopeImageView" destination="tG8-QZ-4qe" id="9TK-o7-lsi"/>
                                             <outlet property="HoroscopeNameLabel" destination="eY0-v8-B6s" id="Rwc-0A-xaY"/>
+                                            <outlet property="favoriteImageView" destination="Ob0-yq-ddR" id="xTE-pO-80y"/>
                                             <segue destination="xh3-Vo-m0D" kind="show" id="6PW-Z9-s4t"/>
                                         </connections>
                                     </tableViewCell>
@@ -73,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="x6c-kK-utU">
@@ -123,9 +129,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="AaY-Sp-qO3">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" id="6NW-Nd-1Nv"/>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="6NW-Nd-1Nv"/>
                             <barButtonItem title="Item" image="heart" catalog="system" id="JrQ-XJ-aBt">
                                 <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="setFavorite:" destination="xh3-Vo-m0D" id="0h3-fg-JOM"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -133,6 +142,8 @@
                         <outlet property="HoroscopeDatesLabel" destination="ndN-V5-bSP" id="SYe-CN-i46"/>
                         <outlet property="HoroscopeImageView" destination="fmW-bp-Tnm" id="aeX-rq-OJ7"/>
                         <outlet property="HoroscopeNameLabel" destination="rxh-WI-aBm" id="6ml-ko-NEO"/>
+                        <outlet property="favoriteMenu" destination="JrQ-XJ-aBt" id="8Rg-Sw-iSt"/>
+                        <outlet property="shareMenu" destination="6NW-Nd-1Nv" id="sG5-cy-g2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feM-ZV-05U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -160,6 +171,8 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
